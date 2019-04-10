@@ -2,7 +2,8 @@ package ac.za.cput.Factory;
 
 import ac.za.cput.Domain.Dvd;
 
-import static org.junit.Assert.*;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class DvdFactoryTest {
 
