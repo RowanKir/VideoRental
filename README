@@ -1,0 +1,11 @@
+My problem domain is a information System for a video Rental Store.
+
+Its a stand-alone store, not a large Enterprise
+A video or movie can be any medium(eg. VCR, DVD)
+The rental charge may vary by medium.
+The store is a rental store, not sales.
+All transactions are rentals.
+Payments can be cash payments or credit on account can be used.
+Manager oversees all the business during working hours and has the authority to modify any transaction
+At the end of the day the admin checks all transactions
+At the end of transaction, the customer receives a report with information on the transaction

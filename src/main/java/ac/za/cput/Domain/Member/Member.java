@@ -1,4 +1,4 @@
-package ac.za.cput.Domain;
+package ac.za.cput.Domain.Member;
 
 public class Member {
 
