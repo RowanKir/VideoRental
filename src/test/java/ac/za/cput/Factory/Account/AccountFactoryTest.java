@@ -6,5 +6,11 @@ public class AccountFactoryTest {
 
     @org.junit.Test
     public void getAccount() {
+        int accountId = 1;
+        int payCode =1;
+        String accountType = "Premium";
+        String accountName = "RowPrem";
+        String accountDetails = "Discount";
+
     }
 }
