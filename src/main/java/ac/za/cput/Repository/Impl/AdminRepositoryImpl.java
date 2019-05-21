@@ -1,6 +1,6 @@
 package ac.za.cput.Repository.Impl;
 
-import ac.za.cput.Domain.VideoRentalStore.Admin;
+import ac.za.cput.Domain.Store.Admin;
 import ac.za.cput.Repository.AdminRepository;
 
 import java.util.HashSet;
@@ -23,7 +23,7 @@ public class AdminRepositoryImpl implements AdminRepository {
         return admin;
     }
 
-    public Admin read (Admin admin)
+    public Admin read (String admin)
     {
         return null;
     }

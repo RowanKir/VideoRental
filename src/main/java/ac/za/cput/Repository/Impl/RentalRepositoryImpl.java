@@ -23,7 +23,7 @@ public class RentalRepositoryImpl implements RentalRepository {
         return rental;
     }
 
-    public Rental read (Rental rental)
+    public Rental read (String rental)
     {
         return null;
     }

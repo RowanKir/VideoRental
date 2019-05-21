@@ -1,6 +1,6 @@
 package ac.za.cput.Repository.Impl;
 
-import ac.za.cput.Domain.VideoRentalStore.Employee;
+import ac.za.cput.Domain.Store.Employee;
 import ac.za.cput.Repository.EmployeeRepository;
 
 import java.util.HashSet;
@@ -23,7 +23,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
         return emp;
     }
 
-    public Employee read (Employee emp)
+    public Employee read (String emp)
     {
         return null;
     }

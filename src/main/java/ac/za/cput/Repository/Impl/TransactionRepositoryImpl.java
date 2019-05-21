@@ -11,7 +11,7 @@ public class TransactionRepositoryImpl implements TransactionRepository {
     private static TransactionRepositoryImpl repository = null;
     private Set<TransactionType> transaction = new HashSet<>();
 
-    static TransactionRepositoryImpl getRepository()
+    public static TransactionRepositoryImpl getRepository()
     {
         if(repository == null) repository = new TransactionRepositoryImpl();
         return repository;
@@ -23,7 +23,7 @@ public class TransactionRepositoryImpl implements TransactionRepository {
         return transaction;
     }
 
-    public TransactionType read (TransactionType transaction)
+    public TransactionType read (String transaction)
     {
         return null;
     }

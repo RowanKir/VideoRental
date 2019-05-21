@@ -11,7 +11,7 @@ public class NonMemberRepositoryImpl implements NonMemberRepository {
     private static NonMemberRepositoryImpl repository = null;
     private Set<NonMember> non = new HashSet<>();
 
-    static NonMemberRepositoryImpl getRepository()
+    public static NonMemberRepositoryImpl getRepository()
     {
         if(repository == null) repository = new NonMemberRepositoryImpl();
         return repository;
@@ -23,7 +23,7 @@ public class NonMemberRepositoryImpl implements NonMemberRepository {
         return non;
     }
 
-    public NonMember read (NonMember non)
+    public NonMember read (String non)
     {
         return null;
     }

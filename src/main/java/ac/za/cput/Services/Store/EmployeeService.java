@@ -1,0 +1,11 @@
+package ac.za.cput.Services.Store;
+
+import ac.za.cput.Domain.Store.Employee;
+import ac.za.cput.Services.IService;
+
+import java.util.Set;
+
+public interface EmployeeService extends IService<Employee, String>
+{
+    Set<Employee> getAll();
+}

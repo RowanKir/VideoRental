@@ -11,7 +11,7 @@ public class PaymentRepositoryImpl implements PaymentRepository {
     private static PaymentRepositoryImpl repository = null;
     private Set<PaymentMethod> payment = new HashSet<>();
 
-    static PaymentRepositoryImpl getRepository()
+    public static PaymentRepositoryImpl getRepository()
     {
         if(repository == null) repository = new PaymentRepositoryImpl();
         return repository;
@@ -23,7 +23,7 @@ public class PaymentRepositoryImpl implements PaymentRepository {
         return payment;
     }
 
-    public PaymentMethod read (PaymentMethod payment)
+    public PaymentMethod read (String payment)
     {
         return null;
     }

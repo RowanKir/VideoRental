@@ -11,7 +11,7 @@ public class ReportRepositoryImpl implements ReportRepository {
     private static ReportRepositoryImpl repository = null;
     private Set<Report>report = new HashSet<>();
 
-    static ReportRepositoryImpl getRepository()
+    public static ReportRepositoryImpl getRepository()
     {
         if(repository == null) repository = new ReportRepositoryImpl();
         return repository;
@@ -23,7 +23,7 @@ public class ReportRepositoryImpl implements ReportRepository {
         return report;
     }
 
-    public Report read (Report report)
+    public Report read (String report)
     {
         return null;
     }

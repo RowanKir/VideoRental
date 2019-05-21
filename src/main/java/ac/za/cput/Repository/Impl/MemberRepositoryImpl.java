@@ -11,7 +11,7 @@ public class MemberRepositoryImpl implements MemberRepository {
     private static MemberRepositoryImpl repository = null;
     private Set<Member>member = new HashSet<>();
 
-    static MemberRepositoryImpl getRepository()
+    public static MemberRepositoryImpl getRepository()
     {
         if(repository == null) repository = new MemberRepositoryImpl();
         return repository;
@@ -23,7 +23,7 @@ public class MemberRepositoryImpl implements MemberRepository {
         return member;
     }
 
-    public Member read (Member member)
+    public Member read (String member)
     {
         return null;
     }

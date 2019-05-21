@@ -1,6 +1,6 @@
 package ac.za.cput.Repository.Impl;
 
-import ac.za.cput.Domain.VideoRentalStore.Manager;
+import ac.za.cput.Domain.Store.Manager;
 import ac.za.cput.Repository.ManagerRepository;
 
 import java.util.HashSet;
@@ -23,7 +23,7 @@ public class ManagerRepositoryImpl implements ManagerRepository {
         return manager;
     }
 
-    public Manager read (Manager manager)
+    public Manager read (String manager)
     {
         return null;
     }

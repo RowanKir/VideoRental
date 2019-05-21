@@ -1,6 +1,6 @@
 package ac.za.cput.Repository;
 
-import ac.za.cput.Domain.VideoRentalStore.Manager;
+import ac.za.cput.Domain.Store.Manager;
 
 import java.util.Set;
 

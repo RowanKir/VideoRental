@@ -1,6 +1,6 @@
 package ac.za.cput.Repository.Impl;
 
-import ac.za.cput.Domain.VideoRentalStore.StoreAddress;
+import ac.za.cput.Domain.Store.StoreAddress;
 import ac.za.cput.Repository.AddressRepository;
 
 import java.util.HashSet;
@@ -23,7 +23,7 @@ public class AddressRepositoryImpl implements AddressRepository {
         return address;
     }
 
-    public StoreAddress read (StoreAddress address)
+    public StoreAddress read (String address)
     {
         return null;
     }

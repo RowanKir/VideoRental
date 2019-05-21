@@ -22,7 +22,7 @@ public class GenreRepositoryImpl implements GenreRepository {
         return genre;
     }
 
-    public Genre read (Genre genre)
+    public Genre read (String genre)
     {
         return null;
     }

@@ -11,7 +11,7 @@ public class ActorRepositoryImpl implements ActorRepository {
     private static ActorRepositoryImpl repository = null;
     private Set<Actor> actor = new HashSet<>();
 
-    static ActorRepository getRepository()
+    public static ActorRepository getRepository()
     {
         if(repository == null) repository = new ActorRepositoryImpl();
         return repository;
@@ -23,7 +23,7 @@ public class ActorRepositoryImpl implements ActorRepository {
         return actor;
     }
 
-    public Actor read (Actor actor)
+    public Actor read (String actor)
     {
         //find the student in the set and return it if it exist
         return null;

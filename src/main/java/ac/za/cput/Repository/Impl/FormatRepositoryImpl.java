@@ -23,7 +23,7 @@ public class FormatRepositoryImpl implements FormatRepository {
         return format;
     }
 
-    public FormatType read (FormatType format)
+    public FormatType read (String format)
     {
         return null;
     }

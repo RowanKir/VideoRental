@@ -11,7 +11,7 @@ public class InventoryRepositoryImpl implements InventoryRepository {
     private static InventoryRepositoryImpl repository = null;
     private Set<Inventory> inventory = new HashSet<>();
 
-    static InventoryRepositoryImpl getRepository()
+    public static InventoryRepositoryImpl getRepository()
     {
         if(repository == null) repository = new InventoryRepositoryImpl();
         return repository;
@@ -23,7 +23,7 @@ public class InventoryRepositoryImpl implements InventoryRepository {
         return inventory;
     }
 
-    public Inventory read (Inventory inventory)
+    public Inventory read (String inventory)
     {
         return null;
     }

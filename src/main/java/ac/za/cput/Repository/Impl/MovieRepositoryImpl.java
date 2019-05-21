@@ -23,7 +23,7 @@ public class MovieRepositoryImpl implements MovieRepository {
         return movie;
     }
 
-    public Movie read (Movie movie)
+    public Movie read (String movie)
     {
         return null;
     }

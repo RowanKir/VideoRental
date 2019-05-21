@@ -11,7 +11,7 @@ public class NotificationRepositoryImpl implements NotificationRepository {
     private static NotificationRepositoryImpl repository = null;
     private Set<Notification> notifications = new HashSet<>();
 
-    static NotificationRepositoryImpl getRepository()
+    public static NotificationRepositoryImpl getRepository()
     {
         if(repository == null) repository = new NotificationRepositoryImpl();
         return repository;
@@ -23,7 +23,7 @@ public class NotificationRepositoryImpl implements NotificationRepository {
         return notifications;
     }
 
-    public Notification read (Notification notifications)
+    public Notification read (String notifications)
     {
         return null;
     }

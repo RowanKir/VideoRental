@@ -23,7 +23,7 @@ public class CastRepositoryImpl implements CastRepository {
         return cast;
     }
 
-    public MovieCast read (MovieCast cast)
+    public MovieCast read (String cast)
     {
         return null;
     }

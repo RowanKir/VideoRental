@@ -11,7 +11,7 @@ public class CustomerRepositoryImpl implements CustomerRespository {
     private static CustomerRepositoryImpl repository = null;
     private Set<Customer> cust = new HashSet<>();
 
-    static CustomerRepositoryImpl getRepository()
+    public static CustomerRepositoryImpl getRepository()
     {
         if(repository == null) repository = new CustomerRepositoryImpl();
         return repository;
@@ -23,7 +23,7 @@ public class CustomerRepositoryImpl implements CustomerRespository {
         return cust;
     }
 
-    public Customer read (Customer cust)
+    public Customer read (String cust)
     {
         return null;
     }

@@ -11,7 +11,7 @@ public class AccountRepositoryImpl implements AccountRepository {
     private static AccountRepositoryImpl repository = null;
     private Set<Account> account = new HashSet<>();
 
-    static AccountRepository getRepository()
+    public static AccountRepository getRepository()
     {
         if(repository == null) repository = new AccountRepositoryImpl();
 
@@ -25,7 +25,7 @@ public class AccountRepositoryImpl implements AccountRepository {
         return account;
     }
 
-    public Account read(Account account) {
+    public Account read(String account) {
         //find the student in the set and return it if it exist
         return null;
     }

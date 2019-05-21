@@ -23,7 +23,7 @@ public class ConditionRepositoryImpl implements ConditionRepository {
         return condition;
     }
 
-    public Condition read (Condition condition)
+    public Condition read (String condition)
     {
         return null;
     }

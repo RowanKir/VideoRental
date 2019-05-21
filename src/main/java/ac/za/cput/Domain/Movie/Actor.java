@@ -48,7 +48,7 @@ public class Actor {
 
     @Override
     public String toString() {
-        return "Actor{" +
+        return "ActorService{" +
                 "actorId=" + actorId +
                 ", actorGender='" + actorGender + '\'' +
                 ", actorFullName='" + actorFullName + '\'' +

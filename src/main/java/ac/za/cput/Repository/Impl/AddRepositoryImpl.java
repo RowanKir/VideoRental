@@ -11,7 +11,7 @@ public class AddRepositoryImpl implements AddRepository {
     private static AddRepositoryImpl repository = null;
     private Set<AddMember> addMember = new HashSet<>();
 
-    static AddRepository getRepository()
+    public static AddRepository getRepository()
     {
         if(repository == null) repository = new AddRepositoryImpl();
         return repository;
@@ -23,7 +23,7 @@ public class AddRepositoryImpl implements AddRepository {
         return addMember;
     }
 
-    public AddMember read (AddMember addMember)
+    public AddMember read (String addMember)
     {
         //find the addMember in the set and return it if it exist
         return null;

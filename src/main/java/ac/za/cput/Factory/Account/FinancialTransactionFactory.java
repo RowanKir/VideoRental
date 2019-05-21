@@ -1,12 +1,12 @@
 package ac.za.cput.Factory.Account;
 
-import ac.za.cput.Domain.Account.FinancialTransactions;
+import ac.za.cput.Domain.Account.FinancialTransaction;
 
 public class FinancialTransactionFactory {
 
-    public static FinancialTransactions getFinancialTransactions(int transId, int accountId, int itemRentalId, int transCode, int transDate, int transAmt)
+    public static FinancialTransaction getFinancialTransactions(int transId, int accountId, int itemRentalId, int transCode, int transDate, int transAmt)
     {
-        return new FinancialTransactions.Builder()
+        return new FinancialTransaction.Builder()
                 .transId(transId)
                 .accountId(accountId)
                 .itemRentalId(itemRentalId)

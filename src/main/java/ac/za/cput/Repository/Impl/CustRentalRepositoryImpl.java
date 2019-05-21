@@ -23,7 +23,7 @@ public class CustRentalRepositoryImpl implements CustRentalRepository {
         return customerRental;
     }
 
-    public CustomerRental read (CustomerRental customerRental)
+    public CustomerRental read (String customerRental)
     {
         return null;
     }
