@@ -12,7 +12,7 @@ public class StatusRepositoryImpl implements StatusRepository {
     private static StatusRepositoryImpl repository = null;
     private Set<Status> statuses = new HashSet<>();
 
-    static StatusRepositoryImpl getRepository()
+    public static StatusRepositoryImpl getRepository()
     {
         if(repository == null) repository = new StatusRepositoryImpl();
         return repository;

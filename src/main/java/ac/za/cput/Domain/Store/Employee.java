@@ -1,9 +1,10 @@
 package ac.za.cput.Domain.Store;
 
+import ac.za.cput.Domain.Account.Account;
+
 public class Employee {
 
-    int empId;
-    String empName, empTitle, empAdress;
+    String empName, empId, empTitle, empAdress;
 
     public Employee(Builder builder) {
         this.empId = builder.empId;
@@ -12,7 +13,7 @@ public class Employee {
         this.empAdress = builder.empAdress;
     }
 
-    public int getEmpId() {
+    public String getEmpId() {
         return empId;
     }
 
@@ -30,10 +31,10 @@ public class Employee {
 
     public static class Builder
     {
-        int empId;
+        String empId;
         String empName, empTitle, empAdress;
 
-        public Builder empId(int empId)
+        public Builder empId(String empId)
         {
             this.empId = empId;
             return this;
@@ -57,10 +58,19 @@ public class Employee {
             return this;
         }
 
+        public Builder copy(Employee employee){
+            this.empId = employee.empId;
+            this.empName = employee.empName;
+
+            return this;
+        }
+
         public Employee build()
         {
             return new Employee(this);
         }
+
+
     }
 
     @Override

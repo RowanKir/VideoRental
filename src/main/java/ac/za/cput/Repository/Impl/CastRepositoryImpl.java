@@ -11,7 +11,7 @@ public class CastRepositoryImpl implements CastRepository {
     private static CastRepositoryImpl repository = null;
     private Set<MovieCast> cast = new HashSet<>();
 
-    static CastRepositoryImpl getRepository()
+    public static CastRepositoryImpl getRepository()
     {
         if (repository == null) repository = new CastRepositoryImpl();
         return repository;

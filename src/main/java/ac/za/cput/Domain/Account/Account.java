@@ -2,8 +2,8 @@ package ac.za.cput.Domain.Account;
 
 public class Account {
 
-    int accountId, payCode;
-    String accountType, accountName, accountDetails;
+    int payCode;
+    String accountType, accountId, accountName, accountDetails;
 
     public Account(Builder builder) {
         this.accountId = builder.accountId;
@@ -13,7 +13,7 @@ public class Account {
         this.accountDetails = builder.accountDetails;
     }
 
-    public int getAccountId() {
+    public String getAccountId() {
         return accountId;
     }
 
@@ -35,10 +35,11 @@ public class Account {
 
     public static class Builder
     {
-        int accountId, payCode;
+        String accountId;
+        int payCode;
         String accountType, accountName, accountDetails;
 
-        public Builder accountId(int accountId)
+        public Builder accountId(String accountId)
         {
             this.accountId = accountId;
             return this;
@@ -68,10 +69,20 @@ public class Account {
             return this;
         }
 
+        public Builder copy(Account course){
+            this.accountId = course.accountId;
+            this.accountName = course.accountName;
+
+            return this;
+        }
+
+
         public Account build()
         {
             return new Account(this);
         }
+
+
     }
 
     @Override

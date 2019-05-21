@@ -11,7 +11,7 @@ public class MovieRepositoryImpl implements MovieRepository {
     private static MovieRepositoryImpl repository = null;
     private Set<Movie> movie = new HashSet<>();
 
-    static MovieRepositoryImpl getRepository()
+    public static MovieRepositoryImpl getRepository()
     {
         if (repository == null) repository = new MovieRepositoryImpl();
         return repository;

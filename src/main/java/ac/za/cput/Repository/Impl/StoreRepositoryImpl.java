@@ -11,7 +11,7 @@ public class StoreRepositoryImpl implements StoreRepository {
     private static StoreRepositoryImpl repository = null;
     private Set<Store> store = new HashSet<>();
 
-    static StoreRepositoryImpl getRepository()
+    public static StoreRepositoryImpl getRepository()
     {
         if(repository == null) repository = new StoreRepositoryImpl();
         return repository;

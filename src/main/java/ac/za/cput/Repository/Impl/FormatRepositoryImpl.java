@@ -11,7 +11,7 @@ public class FormatRepositoryImpl implements FormatRepository {
     private static FormatRepositoryImpl repository = null;
     private Set<FormatType> format = new HashSet<>();
 
-    static FormatRepositoryImpl getRepository()
+    public static FormatRepositoryImpl getRepository()
     {
         if(repository == null) repository = new FormatRepositoryImpl();
         return repository;

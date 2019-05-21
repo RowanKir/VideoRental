@@ -4,6 +4,7 @@ import ac.za.cput.Domain.Movie.Movie;
 import ac.za.cput.Factory.Movie.MovieFactory;
 import ac.za.cput.Repository.MovieRepository;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -26,31 +27,54 @@ public class MovieRepositoryImplTest {
     public void setUp() throws Exception
     {
         this.repository = MovieRepositoryImpl.getRepository();
-        //this.movie = MovieFactory.buildMovie(null, null);
+        this.movie = MovieFactory.buildMovie("1",1 , 1);
     }
 
-    @After
-    public void tearDown() throws Exception {
+
+    @Test
+    public void a_create()
+    {
+        Movie created = this.repository.create(this.movie);
+        System.out.println("In create, created = " + created);
+        d_getAll();
+        Assert.assertSame(created, this.movie);
     }
 
     @Test
-    public void create() {
+    public void b_read()
+    {
+        Movie savedMovie = getSavedMovie();
+        System.out.println("In read, courseId = "+ savedMovie.getMovieId());
+        Movie read = this.repository.read(savedMovie.getMovieId());
+        System.out.println("In read, read = " + read);
+        d_getAll();
+        Assert.assertEquals(savedMovie, read);
     }
 
     @Test
-    public void read() {
+    public void c_update()
+    {
+        String newname = "New Test Course Name";
+        Movie account = new Movie.Builder().copy(getSavedMovie()).movieTitle(newname).build();
+        System.out.println("In update, about_to_updated = " + account);
+        Movie updated = this.repository.update(account);
+        System.out.println("In update, updated = " + updated);
+        assertSame(newname, updated.getMovieTitle());
+        d_getAll();
     }
 
     @Test
-    public void update() {
+    public void e_delete()
+    {
+        Movie savedMovie = getSavedMovie();
+        this.repository.delete(savedMovie.getMovieId());
+        d_getAll();
     }
 
     @Test
-    public void delete() {
-    }
-
-    @Test
-    public void getAll() {
-
+    public void d_getAll()
+    {
+        Set<Movie> accounts =  this.repository.getAll();
+        System.out.println("In getAll, all = " + accounts);
     }
 }

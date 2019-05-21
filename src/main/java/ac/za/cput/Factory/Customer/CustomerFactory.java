@@ -4,7 +4,7 @@ import ac.za.cput.Domain.Customer.Customer;
 
 public class CustomerFactory {
 
-    public static Customer getCustomer(int custId,int custPhone, String custName,String custSurname,String custEmail,String custAddress, boolean mem)
+    public static Customer buildCustomer(String custId, String custPhone, String custName, String custSurname, String custEmail, String custAddress, boolean mem)
     {
         return new Customer.Builder()
                 .custAddress(custAddress)
@@ -16,4 +16,6 @@ public class CustomerFactory {
                 .mem(mem)
                 .build();
     }
+
+
 }

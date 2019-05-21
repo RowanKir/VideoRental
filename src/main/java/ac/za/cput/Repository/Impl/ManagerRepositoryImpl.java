@@ -11,7 +11,7 @@ public class ManagerRepositoryImpl implements ManagerRepository {
     private static ManagerRepositoryImpl repository = null;
     private Set<Manager> manager = new HashSet<>();
 
-    static ManagerRepositoryImpl getRepository()
+    public static ManagerRepositoryImpl getRepository()
     {
         if (repository == null) repository = new ManagerRepositoryImpl();
         return repository;

@@ -1,9 +1,11 @@
 package ac.za.cput.Domain.Movie;
 
+import ac.za.cput.Domain.Account.Account;
+
 public class Movie {
 
-    int movieId, conditionCode, formatTypeCode, gendreCode, storeId, yearRelease, movieRating, numOfStock;
-    String movieTitle, movieDescription;
+    int  conditionCode, formatTypeCode, gendreCode, storeId, yearRelease, movieRating, numOfStock;
+    String movieTitle, movieId, movieDescription;
     double rentalRate, rentalPrice = 0.00;
 
     public Movie(Builder builder) {
@@ -21,7 +23,7 @@ public class Movie {
         this.rentalPrice = builder.rentalPrice;
     }
 
-    public int getMovieId() {
+    public String getMovieId() {
         return movieId;
     }
 
@@ -71,11 +73,18 @@ public class Movie {
 
     public static class Builder
     {
-        int movieId, conditionCode, formatTypeCode, gendreCode, storeId, yearRelease, movieRating, numOfStock;
+        String movieId;
+        int conditionCode;
+        int formatTypeCode;
+        int gendreCode;
+        int storeId;
+        int yearRelease;
+        int movieRating;
+        int numOfStock;
         String movieTitle, movieDescription;
         double rentalRate, rentalPrice = 0.00;
 
-        public Builder movieId(int movieId)
+        public Builder movieId(String movieId)
         {
             this.movieId = movieId;
             return this;
@@ -147,10 +156,19 @@ public class Movie {
             return this;
         }
 
+        public Builder copy(Movie movie){
+            this.movieId = movie.movieId;
+            this.movieTitle = movie.movieTitle;
+
+            return this;
+        }
+
         public Movie build()
         {
             return new Movie(this);
         }
+
+
     }
 
     @Override

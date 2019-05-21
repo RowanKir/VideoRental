@@ -1,16 +1,19 @@
 package ac.za.cput.Factory.Movie;
 
-import ac.za.cput.Domain.Movie.CustomerRental;
+import ac.za.cput.Domain.Movie.CustRental;
 
-public class CustomerRentalFactory {
+public class CustRentalFactory {
 
-    public static CustomerRental getCustomerRental(int itemRentalId,int customerId,int movieId,int rentalStatusCode)
+    public static CustRental buildCustRental(int itemRentalId, String customerId, int movieId, int rentalStatusCode)
     {
-        return new CustomerRental.Builder()
+        return new CustRental.Builder()
                 .itemRentalId(itemRentalId)
                 .customerId(customerId)
                 .movieId(movieId)
                 .rentalStatusCode(rentalStatusCode)
                 .build();
     }
+
+
+
 }

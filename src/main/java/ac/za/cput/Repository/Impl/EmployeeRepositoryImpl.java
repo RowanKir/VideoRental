@@ -11,7 +11,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     private static EmployeeRepositoryImpl repository = null;
     private Set<Employee> emp = new HashSet<>();
 
-    static EmployeeRepositoryImpl getRepository()
+    public static EmployeeRepositoryImpl getRepository()
     {
         if(repository == null) repository = new EmployeeRepositoryImpl();
         return repository;

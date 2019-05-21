@@ -1,11 +1,11 @@
 package ac.za.cput.Services.Movie;
 
-import ac.za.cput.Domain.Movie.CustomerRental;
+import ac.za.cput.Domain.Movie.CustRental;
 import ac.za.cput.Services.IService;
 
 import java.util.Set;
 
-public interface CustomerRentalService extends IService<CustomerRental, String>
+public interface CustomerRentalService extends IService<CustRental, String>
 {
-    Set<CustomerRental> getAll();
+    Set<CustRental> getAll();
 }

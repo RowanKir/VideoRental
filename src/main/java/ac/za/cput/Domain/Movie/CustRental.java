@@ -1,10 +1,13 @@
 package ac.za.cput.Domain.Movie;
 
-public class CustomerRental {
+import ac.za.cput.Domain.Account.Account;
 
-    int itemRentalId, customerId, movieId, rentalStatusCode;
+public class CustRental {
 
-    public CustomerRental(Builder builder) {
+    int itemRentalId,  movieId, rentalStatusCode;
+    String customerId;
+
+    public CustRental(Builder builder) {
         this.itemRentalId = builder.itemRentalId;
         this.customerId = builder.customerId;
         this.movieId = builder.movieId;
@@ -15,7 +18,7 @@ public class CustomerRental {
         return itemRentalId;
     }
 
-    public int getCustomerId() {
+    public String getCustomerId() {
         return customerId;
     }
 
@@ -29,7 +32,10 @@ public class CustomerRental {
 
     public static class Builder
     {
-        int itemRentalId, customerId, movieId, rentalStatusCode;
+        int itemRentalId;
+        String customerId;
+        int movieId;
+        int rentalStatusCode;
 
         public Builder itemRentalId (int itemRentalId)
         {
@@ -37,7 +43,7 @@ public class CustomerRental {
             return this;
         }
 
-        public Builder customerId (int customerId)
+        public Builder customerId (String customerId)
         {
             this.customerId = customerId;
             return this;
@@ -55,9 +61,18 @@ public class CustomerRental {
             return this;
         }
 
-        public CustomerRental build()
-        {
-            return new CustomerRental(this);
+        public Builder copy(CustRental custRental){
+            this.customerId = custRental.customerId;
+            this.movieId = custRental.movieId;
+
+            return this;
         }
+
+        public CustRental build()
+        {
+            return new CustRental(this);
+        }
+
+
     }
 }

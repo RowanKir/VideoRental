@@ -2,8 +2,7 @@ package ac.za.cput.Domain.Customer;
 
 public class Customer {
 
-    int custId, custPhone;
-    String custName, custSurname, custEmail, custAddress;
+    String custName, custPhone, custId, custSurname, custEmail, custAddress;
     boolean mem;
 
     public Customer(Builder builder) {
@@ -16,11 +15,11 @@ public class Customer {
         this.mem = builder.mem;
     }
 
-    public int getCustId() {
+    public String getCustId() {
         return custId;
     }
 
-    public int getCustPhone() {
+    public String getCustPhone() {
         return custPhone;
     }
 
@@ -46,17 +45,18 @@ public class Customer {
 
     public static class Builder
     {
-        int custId, custPhone;
+        String custId;
+        String custPhone;
         String custName, custSurname, custEmail, custAddress;
         boolean mem;
 
-        public Builder custId(int custId)
+        public Builder custId(String custId)
         {
             this.custId = custId;
             return this;
         }
 
-        public Builder custPhone(int custPhone)
+        public Builder custPhone(String custPhone)
         {
             this.custPhone = custPhone;
             return this;
@@ -92,10 +92,19 @@ public class Customer {
             return this;
         }
 
+        public Builder copy(Customer customer){
+            this.custId = customer.custId;
+            this.custName = customer.custName;
+
+            return this;
+        }
+
         public Customer build()
         {
             return new Customer(this);
         }
+
+
     }
 
     @Override

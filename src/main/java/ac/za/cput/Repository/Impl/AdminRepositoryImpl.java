@@ -11,7 +11,7 @@ public class AdminRepositoryImpl implements AdminRepository {
     private static AdminRepositoryImpl repository = null;
     private Set<Admin> admin = new HashSet<>();
 
-    static AdminRepositoryImpl getRepository()
+    public static AdminRepositoryImpl getRepository()
     {
         if (repository == null) repository = new AdminRepositoryImpl();
         return repository;

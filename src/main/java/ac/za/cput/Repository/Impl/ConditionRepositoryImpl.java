@@ -11,7 +11,7 @@ public class ConditionRepositoryImpl implements ConditionRepository {
     private static ConditionRepositoryImpl repository = null;
     private Set<Condition> condition = new HashSet<>();
 
-    static ConditionRepositoryImpl getRepository()
+    public static ConditionRepositoryImpl getRepository()
     {
         if(repository == null) repository = new ConditionRepositoryImpl();
         return repository;

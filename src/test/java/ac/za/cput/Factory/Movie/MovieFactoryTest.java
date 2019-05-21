@@ -21,7 +21,7 @@ public class MovieFactoryTest
     @After
     public void buildMovie()
     {
-        Movie movie = MovieFactory.buildMovie(1, 1, 1);
+        Movie movie = MovieFactory.buildMovie("1", 1, 1);
         Assert.assertNotNull(movie.getConditionCode());
         Assert.assertNotNull(movie);
     }

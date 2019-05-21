@@ -11,7 +11,7 @@ public class RentalRepositoryImpl implements RentalRepository {
     private static RentalRepositoryImpl repository = null;
     private Set<Rental> rental = new HashSet<>();
 
-    static RentalRepositoryImpl getRepository()
+    public static RentalRepositoryImpl getRepository()
     {
         if (repository == null) repository = new RentalRepositoryImpl();
         return repository;
