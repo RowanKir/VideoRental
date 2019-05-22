@@ -13,7 +13,7 @@ public class MovieController
     private MovieServiceImpl service;
 
     @GetMapping("/create/{courseName}")
-    public @ResponseBody
+    public @ResonseBody
     Movie create(@PathVariable  String courseName)
     {
         Movie movie = MovieFactory.buildMovie("1" , 1 , 1);

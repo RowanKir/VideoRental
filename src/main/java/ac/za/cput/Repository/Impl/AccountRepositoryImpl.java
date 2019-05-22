@@ -8,42 +8,138 @@ import java.util.Set;
 
 public class AccountRepositoryImpl implements AccountRepository {
 
-    private static AccountRepositoryImpl repository = null;
-    private Set<Account> account = new HashSet<>();
+    private static AccountRepositoryImpl accountRepositoryImpl = null;
+    private Set<Account> accounts;
 
-    public static AccountRepository getRepository()
+    private AccountRepositoryImpl(){
+        this.accounts = new HashSet<>();
+    }
+
+
+
+    @Override
+    public Set<Account> getAll() {
+        return null;
+    }
+
+    @Override
+    public Account create(Account account) {
+        return null;
+    }
+
+    @Override
+    public Account update(Account account) {
+        return null;
+    }
+
+    @Override
+    public void delete(String id) {
+
+    }
+
+    @Override
+    public Account read(String t) {
+        return null;
+    }
+
+    /*private Account findAccount(final String accountId){
+        return this.accounts.stream()
+                .filter(account -> account.getAccountId().trim().equals(accountId))
+                .findAny()
+                .orElse(null);
+    }
+
+    public static AccountRepositoryImpl getAccountRepositoryImpl(){
+        if(accountRepositoryImpl == null)
+            accountRepositoryImpl = new AccountRepositoryImpl();
+            return accountRepositoryImpl;
+    }
+
+    public Account createAccount(Account account){
+        this.accounts.add(account);
+        return account;
+    }
+
+    public Account readAccount(final String accountId){
+        Account account = findAccount(accountId);
+        return account;
+    }
+
+    public void deleteAccount(String accountID){
+        Account account = findAccount(accountID);
+        if(account != null) this.accounts.remove(account);
+    }
+
+    public Account updateAccount(Account account){
+        Account toDelete = findAccount(account.getAccountId());
+        if(toDelete != null){
+            this.accounts.remove(toDelete);
+            return create(account);
+        }
+        return null;
+    }
+
+    public Set<Account> getAllAccounts(){
+        return this.accounts;
+    }*/
+    /*private Account findAccount(final String accountId)
     {
-        if(repository == null) repository = new AccountRepositoryImpl();
+        return this.account.stream()
+                .filter(account -> account.getAccountId().trim().equals(accountId))
+                .findAny()
+                .orElse(null);
+    }
 
-            return repository;
+    public static AccountRepositoryImpl getRepository()
+    {
+        if(accountRepositoryImpl == null)
+            accountRepositoryImpl = new AccountRepositoryImpl();
+
+            return accountRepositoryImpl;
 
     }
 
     public Account create (Account account)
     {
+
         this.account.add(account);
         return account;
     }
 
-    public Account read(String account) {
-        //find the student in the set and return it if it exist
+    public Account read(final String account) {
+
+        for (Account account1 : account)
+            if (account.getAccountId().equals(id)) {
+                account.remove(i);
+            }
+        return this.account.get(account);
+        Account account = getAll(ac);
         return null;
     }
 
-    public Account update (Account account)
+    public Account update (Account accountId)
     {
-        //find the student, update it and return the updated student
-        return null;
+        //return (Account) this.account;
+        Account toDelete = getAccount(accountId.getAccountId());
+        if(toDelete != null)
+        {
+            this.account.remove(toDelete);
+            return create(accountId);
+        }
+    }
+
+    private Account getAccount(final String accountId) {
+        if(account.contains()){}for(){if(){}}
     }
 
     public void delete(String account)
     {
-        //find the student and delete it if it exists
+        this.account.remove(account);
     }
 
     public Set<Account> getAll()
     {
         final Set<Account> account = this.account;
         return account;
-    }
+    }*/
 }
